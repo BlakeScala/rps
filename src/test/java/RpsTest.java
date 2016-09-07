@@ -29,4 +29,11 @@ public class RpsTest{
     String expected = "tie";
     assertEquals(expected, testRps.whoWon("paper", "paper"));
   }
+
+  @Test
+  public void computerChooses_shouldBeAString_true(){
+    Rps testRps = new Rps();
+    String computerChoice = testRps.computerChooses();
+    assertEquals(true, !computerChoice.isEmpty());
+  }
 }

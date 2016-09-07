@@ -1,4 +1,5 @@
-//REMEMBER TO RENAME
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Rps{
   public String whoWon(String player1Shoot, String player2Shoot){
     String[] rpsArray = {"rock", "scissors", "paper"};
@@ -13,5 +14,12 @@ public class Rps{
       winner = "tie";
     }
     return winner;
+  }
+
+  public String computerChooses(){
+    String[] rpsArray = {"rock", "scissors", "paper"};
+    int choiceInt = ThreadLocalRandom.current().nextInt(0, rpsArray.length);
+    String choice = rpsArray[choiceInt];
+    return choice;
   }
 }
